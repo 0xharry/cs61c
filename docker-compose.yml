@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  cs61c:
+    build: .
+    # image: redis:alpine
+    volumes:
+      - /home/wsl/.ssh:/root/.ssh:ro
+      - /home/wsl/.gitconfig:/root/.gitconfig:ro
+      - .:/root/cs61c
+    # environment:
+    #   DEBUG: "true"
